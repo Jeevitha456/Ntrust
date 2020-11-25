@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Ntrust</string>
+    <string name="login">Login</string>
+    <string name="_login"><u>Login</u></string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="or">Or</string>
+    <string name="forgot_password"><u>Forgot password?</u></string>
+    <string name="continue_with">Continue With</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="read">Read</string>
+    <string name="_tc"><u>Terms and conditions</u></string>
+</resources>
