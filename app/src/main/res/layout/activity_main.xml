@@ -37,7 +37,9 @@
 
         <EditText
             android:id="@+id/edt_gmail"
-            android:layout_width="@dimen/_337"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".9"
             android:layout_height="@dimen/_44"
             android:layout_marginStart="@dimen/_19"
             android:layout_marginLeft="@dimen/_19"
@@ -56,7 +58,9 @@
 
         <EditText
             android:id="@+id/edt_password"
-            android:layout_width="@dimen/_337"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".9"
             android:layout_height="@dimen/_44"
             android:layout_marginStart="@dimen/_19"
             android:layout_marginLeft="@dimen/_19"
@@ -98,7 +102,9 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_login"
-            android:layout_width="@dimen/_310"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".8"
             android:layout_height="@dimen/_44"
             android:layout_marginStart="@dimen/_30"
             android:layout_marginLeft="@dimen/_30"

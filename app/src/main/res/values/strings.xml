@@ -9,5 +9,11 @@
     <string name="continue_with">Continue With</string>
     <string name="already_have_account">Already have an account?</string>
     <string name="read">Read</string>
-    <string name="_tc"><u>Terms and conditions</u></string>
+    <string name="_tc"><u>Terms and Conditions</u></string>
+    <string name="AlertEmailPassword">Please enter email id and password</string>
+    <string name="AlertEmail">Please enter email id</string>
+    <string name="AlertPassword">Please enter password</string>
+    <string name="AlertEmailInvalid">Entered Email is invalid</string>
+    <string name="AlertPasswordInvalid">Please enter minimum of 4 character password</string>
+
 </resources>

@@ -14,18 +14,18 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
     private lateinit var edtmail: EditText
     private lateinit var edtpassword: EditText
-    private lateinit var hide_show: ImageView
+    private lateinit var hideshow: ImageView
     private lateinit var alertText: TextView
     private lateinit var btnLogin: Button
-    var ishide: Boolean = false
+    private var ishide: Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        edtmail = findViewById(R.id.edt_gmail) as EditText
-        edtpassword = findViewById(R.id.edt_password) as EditText
-        hide_show = findViewById(R.id.img_eye) as ImageView
-        alertText = findViewById(R.id.alertTitle) as TextView
-        btnLogin = findViewById(R.id.btn_login) as Button
+        edtmail = findViewById(R.id.edt_gmail)
+        edtpassword = findViewById(R.id.edt_password)
+        hideshow = findViewById(R.id.img_eye)
+        alertText = findViewById(R.id.alertTitle)
+        btnLogin = findViewById(R.id.btn_login)
         seteventhandler()
     }
 
@@ -36,12 +36,12 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
-        hide_show.setOnClickListener() {
+        hideshow.setOnClickListener {
             if (!ishide) {
-                edtpassword.setTransformationMethod(PasswordTransformationMethod())
+                edtpassword.transformationMethod = PasswordTransformationMethod()
                 ishide = true
             } else {
-                edtpassword.setTransformationMethod(null)
+                edtpassword.transformationMethod = null
                 ishide = false
             }
 
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         val email: String = edtmail.text.toString().trim()
         val password: String = edtpassword.text.toString().trim()
         if (email.isEmpty() && edtpassword.text.isNullOrEmpty()) {
-            alertText.setText("Please enter email id and password")
+            alertText.setText(R.string.AlertEmailPassword)
             edtmail.setBackgroundResource(R.drawable.custom_edittextalert)
             edtpassword.setBackgroundResource(R.drawable.custom_edittextalert)
             return false
@@ -61,25 +61,25 @@ class MainActivity : AppCompatActivity() {
         if (email.isEmpty()) {
             edtmail.setBackgroundResource(R.drawable.custom_edittextalert)
             edtpassword.setBackgroundResource(R.drawable.custom_edittextalert)
-            alertText.setText("Please enter email id")
+            alertText.setText(R.string.AlertEmail)
             return false
         }
         if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             edtmail.setBackgroundResource(R.drawable.custom_edittextalert)
             edtpassword.setBackgroundResource(R.drawable.custom_edittextalert)
-            alertText.setText("Entered Email is invalid")
+            alertText.setText(R.string.AlertEmailInvalid)
             return false
         }
         if (password.isEmpty()) {
             edtmail.setBackgroundResource(R.drawable.custom_edittextalert)
             edtpassword.setBackgroundResource(R.drawable.custom_edittextalert)
-            alertText.setText("Please enter password")
+            alertText.setText(R.string.AlertPassword)
             return false
         }
         if (password.length < 5) {
             edtmail.setBackgroundResource(R.drawable.custom_edittextalert)
             edtpassword.setBackgroundResource(R.drawable.custom_edittextalert)
-            alertText.setText("Please enter minimum of 4 character password")
+            alertText.setText(R.string.AlertPasswordInvalid)
             return false
         }
         edtmail.setBackgroundResource(R.drawable.customedittext)
