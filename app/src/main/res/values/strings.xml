@@ -25,4 +25,13 @@
     <string name="weight">Weight</string>
     <string name="height">Height</string>
     <string name="submit">Submit</string>
+    <string name="noInternetConnection">No Internet Connection</string>
+    <string name="noInternetAlert">We are unable to connect to internet, please</string>
+    <string name="noInternetAlert1">check your connection</string>
+    <string name="refresh">Refresh</string>
+    <string name="verify_email">Verify Email</string>
+    <string name="verify_emailMessage">"Verification email has been sent to</string>
+    <string name="verify_emailMessage1">"*******@email.com  please verify the</string>
+    <string name="verify_emailMessage2">account by clicking the link</string>
+    <string name="resend">Resend</string>
 </resources>

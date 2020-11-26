@@ -4,10 +4,12 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
+import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -18,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var alertText: TextView
     private lateinit var btnLogin: Button
     private var ishide: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,8 +35,7 @@ class MainActivity : AppCompatActivity() {
     private fun seteventhandler() {
         btnLogin.setOnClickListener {
             if (isValid()) {
-                val intent = Intent(this, HomeActivity::class.java)
-                startActivity(intent)
+                showDialog()
             }
         }
         hideshow.setOnClickListener {
@@ -87,4 +89,24 @@ class MainActivity : AppCompatActivity() {
         alertText.text = ""
         return true
     }
+
+    private fun showDialog() {
+        val mDialogView = LayoutInflater.from(this).inflate(R.layout.verify_email_dialogbox, null)
+        //AlertDialogBuilder
+        val mBuilder = AlertDialog.Builder(this)
+            .setView(mDialogView)
+
+        val mAlertDialog = mBuilder.show()
+        val resendBtn = mDialogView.findViewById(R.id.btn_resend) as Button
+
+        resendBtn.setOnClickListener {
+            mAlertDialog.dismiss()
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
 }
+
+
+
