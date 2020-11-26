@@ -15,5 +15,14 @@
     <string name="AlertPassword">Please enter password</string>
     <string name="AlertEmailInvalid">Entered Email is invalid</string>
     <string name="AlertPasswordInvalid">Please enter minimum of 4 character password</string>
-
+    <string name="verification_text">Your email has been verified,</string>
+    <string name="verificationtext2">thank you for joining us!</string>
+    <string name="email_verified">Email Verified</string>
+    <string name="continue_button">Continue</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="full_name">Full Name</string>
+    <string name="dob">Date of Birth (DD-MM-YY)</string>
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="submit">Submit</string>
 </resources>
