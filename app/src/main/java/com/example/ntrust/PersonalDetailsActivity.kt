@@ -15,6 +15,7 @@ class PersonalDetailsActivity : AppCompatActivity() {
     private lateinit var edtweight: Spinner
     private lateinit var edtheight: Spinner
     private lateinit var edtgender: Spinner
+    private lateinit var btnback: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_personal_details)
@@ -23,6 +24,7 @@ class PersonalDetailsActivity : AppCompatActivity() {
         edtgender = findViewById(R.id.edt_gender)
         edtheight = findViewById(R.id.edtdrop_height)
         edtweight = findViewById(R.id.edtdrop_weight)
+        btnback=findViewById(R.id.back)
         setupEventHandlers()
     }
 
@@ -103,6 +105,10 @@ class PersonalDetailsActivity : AppCompatActivity() {
             ) {
                 parent?.getItemAtPosition(position).toString()
             }
+        }
+
+        btnback.setOnClickListener{
+            finish()
         }
     }
 
