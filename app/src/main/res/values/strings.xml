@@ -34,4 +34,8 @@
     <string name="verify_emailMessage1">"*******@email.com  please verify the</string>
     <string name="verify_emailMessage2">account by clicking the link</string>
     <string name="resend">Resend</string>
+    <string name="facebook_app_id">294603171872260</string>
+    <string name="fb_login_protocol_scheme">fb294603171872260</string>
+
+
 </resources>
